@@ -1,16 +1,19 @@
-# This is a sample Python script.
+import streamlit as st
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# Make all object in page full page mode
+st.set_page_config(layout='wide')
+# Create two perpendicularly columns
+col1, col2 = st.columns(2)
 
+with col1:
+    st.image("images/photo.png")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+with col2:
+    st.title('Yusif Osmanov')
+    content = (
+        'There is some important information about me and my life, please read this inforation if you want to know who am i.'
+        'There is some important information about me and my life, please read this inforation if you want to know who am i.'
+        'Thank you for your attentions!')
+    st.info(content)
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+st.write('Below you can find some of the apps i have built in Python. Feel free to contact me!')
